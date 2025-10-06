@@ -1,40 +1,40 @@
 import { 
-  PackageIcon, 
-  BarChart3Icon, 
-  BellIcon, 
-  ShieldCheckIcon,
-  ZapIcon,
-  UsersIcon
+  Package, 
+  BarChart3, 
+  Bell, 
+  ShieldCheck,
+  Zap,
+  Users
 } from 'lucide-react'
 
 const features = [
   {
-    icon: PackageIcon,
+    icon: Package,
     title: 'Real-time Inventory Tracking',
     description: 'Monitor stock levels across multiple locations with instant updates and accurate reporting.'
   },
   {
-    icon: BarChart3Icon,
+    icon: BarChart3,
     title: 'Advanced Analytics',
     description: 'Get insights into sales trends, inventory turnover, and performance metrics.'
   },
   {
-    icon: BellIcon,
+    icon: Bell,
     title: 'Smart Alerts',
     description: 'Automated notifications for low stock, expiring items, and critical inventory events.'
   },
   {
-    icon: ShieldCheckIcon,
+    icon: ShieldCheck,
     title: 'Secure & Reliable',
     description: 'Enterprise-grade security with regular backups and 99.9% uptime guarantee.'
   },
   {
-    icon: ZapIcon,
+    icon: Zap,
     title: 'Lightning Fast',
     description: 'Optimized performance with instant search and rapid data processing.'
   },
   {
-    icon: UsersIcon,
+    icon: Users,
     title: 'Team Collaboration',
     description: 'Multi-user access with role-based permissions and activity tracking.'
   }
