@@ -2,8 +2,7 @@ import { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import bcrypt from 'bcrypt'
 import { ObjectId } from 'mongodb'
-import clientPromise from '@/lib/database/mongodb'
-import { UserProfile } from '@/types/auth'
+import clientPromise from '@/lib/mongodb'
 
 export const authOptions: NextAuthOptions = {
   session: {
@@ -42,17 +41,6 @@ export const authOptions: NextAuthOptions = {
           if (!isValidPassword) {
             throw new Error('Invalid email or password')
           }
-
-          // Update last login
-          await db.collection('users').updateOne(
-            { _id: user._id },
-            { 
-              $set: { 
-                lastLoginAt: new Date(),
-                updatedAt: new Date()
-              }
-            }
-          )
 
           return {
             id: user._id.toString(),
